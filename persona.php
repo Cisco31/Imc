@@ -16,34 +16,28 @@ class Persona{
         $gradoObesidad = '';
 
         if($Imc<18.5){
-            $gradoObesidad="Usted tiene Desnutrición";
+            $gradoObesidad=" tiene delgadez o bajo
+            peso";
  
         }else
  
         if($Imc>=18.5 && $Imc<=24.9){
-          $gradoObesidad= "Su peso es Normal";
+          $gradoObesidad= " tiene su peso Normal";
  
  
         }else
         if($Imc>=25 && $Imc<=29.9){
-          $gradoObesidad= "Usted tiene Sobrepeso";
+          $gradoObesidad= " tiene  Sobrepeso";
  
         }else
-        if($Imc>=30 && $Imc<=34.9){
-          $gradoObesidad= "Tiene un problema de Obesidad";
- 
-        }else
-        if($Imc>=35 && $Imc<=39.9){
-          $gradoObesidad= "Tiene un problema de Obesidad Severa";
- 
-        }else
-        if($Imc>=40){
-          $gradoObesidad= "obeso severo";
+        if($Imc>=30){
+          $gradoObesidad= " tiene un problema de Obesidad";
  
         }
         
         
-        echo 'El es '. $this->nombre. ' tiene una estarura de '. $this->estatura . ' metros y un peso de '. $this->peso . ' kilogramos, por lo que su IMC es de ' .$Imc . ' Kg/m2.';
+        echo 'El es '. $this->nombre. ' tiene una estarura de '. $this->estatura . ' metros y un peso de '. $this->peso . ' kilogramos, por lo que su IMC es de ' .$Imc . ' Kg/m2.' . '<br>'.
+        'Esto quiere decir que ' .$this->nombre . $gradoObesidad;
     }
 
 
